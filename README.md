@@ -56,12 +56,12 @@ export default defineConfig({
     outDir,
     emptyOutDir: true,
     rollupOptions: {
-      input: {
+      input: [
         resolve(root, 'index.html'),
         resolve(root, 'example', 'index.html'),
         resolve(root, 'example', 'nested', 'index.html'),
         resolve(root, 'cool-page', 'index.html')
-      }
+      ]
     }
   }
 });
