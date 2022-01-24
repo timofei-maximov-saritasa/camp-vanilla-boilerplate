@@ -1,8 +1,8 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
-const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'dist')
+const root = resolve(__dirname, 'src');
+const outDir = resolve(__dirname, 'dist');
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,11 +12,11 @@ export default defineConfig({
     outDir,
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: resolve(root, 'index.html'),
-        example: resolve(root, 'example', 'index.html'),
-        nested: resolve(root, 'example', 'nested', 'index.html')
-      }
+      input: [
+        resolve(root, 'index.html'),
+        resolve(root, 'example', 'index.html'),
+        resolve(root, 'example', 'nested', 'index.html')
+      ]
     }
   }
-})
+});
