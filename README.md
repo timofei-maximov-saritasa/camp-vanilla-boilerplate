@@ -71,7 +71,7 @@ You can remove/rename example routes. `index.html` in `src` folder is root file.
 
 ## Stylelint
 
-Boilerplate uses `Stylelint`. To see all error in `css` files, install `Stylelint` extension in your code editor.
+Boilerplate uses `Stylelint`. To see all errors and warnings in `css` files, install `Stylelint` extension in your code editor.
 
 - [VSCode](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - WebStorm has built in support by default.
