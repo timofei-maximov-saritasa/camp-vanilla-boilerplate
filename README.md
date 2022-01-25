@@ -81,3 +81,7 @@ Or you can run
 ```bash
 npm run stylelint
 ```
+
+## Editor config
+
+Consider installing `EditorConfig for VS Code` extension if you're using `VSCode`.
