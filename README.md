@@ -68,3 +68,16 @@ export default defineConfig({
 ```
 
 You can remove/rename example routes. `index.html` in `src` folder is root file. It means, that your `localhost:3000` will be represented by `index.html` file.
+
+## Stylelint
+
+Boilerplate uses `Stylelint`. To see all error in `css` files, install `Stylelint` extension in your code editor.
+
+- [VSCode](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- WebStorm has built in support by default.
+
+Or you can run
+
+```bash
+npm run stylelint
+```
