@@ -26,17 +26,19 @@ npm run preview
 
 ## Adding new page
 
-To add new page, create new folder in `src` folder and add `index.html` file inside.
-After this route to `vite.config.js`(see example).
+1. Create new folder in `src/pages` and move into folder.
+2. Create `index.html`.
+3. Create `.css` and `.ts` files if needed.
+4. Add entry point in `vite.config.ts` (see an example below).
 
 ## Example
 
-Let's say you want to add page with `cool-page` route. You create `index.html` inside  `src/cool-page/`.
+Let's say you want to add `cool` route. You create `index.html` inside  `src/page/cool/`.
 Then you add to `input` array.
 
 ```js
 // vite.config.js
-resolve(root, 'cool-page', 'index.html')
+resolve(root, 'cool', 'index.html')
 ```
 
 Now your `vite.config.js` should look like this:
@@ -71,9 +73,9 @@ You can remove/rename example routes. `index.html` in `src` folder is root file.
 
 ## Stylelint
 
-Boilerplate uses `Stylelint`. To see all errors and warnings in `css` files, install `Stylelint` extension in your code editor.
+Boilerplate uses `stylelint` to lint css. To see all errors and warnings in `css` files, install `stylelint` extension in your code editor.
 
-- [VSCode](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Stylelint for VSCode](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - WebStorm has built in support by default.
 
 Or you can run
