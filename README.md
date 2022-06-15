@@ -4,7 +4,7 @@
 
 ### Development
 
-Just run and visit <http://localhost:3333>
+Just run and visit <http://localhost:3000>
 
 ```bash
 npm run dev
@@ -34,12 +34,10 @@ npm run preview
 
 ### Example
 
-Let's say you want to add `cool` route. You create `index.html` inside `src/page/cool/`.
-Then you add line bellow to `input` array in `vite.config.ts`.
+If you want to add `cool` route take the following steps:
 
-```js
-resolve(root, 'cool', 'index.html')
-```
+1. Create `index.html` inside `src/page/cool/`.
+2. Add `resolve(root, 'cool', 'index.html')` to `input` array in `vite.config.ts`.
 
 Now your `vite.config.ts` should look like this:
 
