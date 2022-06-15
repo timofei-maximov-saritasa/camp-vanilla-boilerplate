@@ -1,49 +1,50 @@
 # Camp vanilla boilerplate
 
-## Install
+## Usage
 
-```bash
-npm run install
-```
+### Development
 
-## Develop
+Just run and visit <http://localhost:3333>
 
 ```bash
 npm run dev
 ```
 
-## Build
+### Build
+
+To build the App, run
 
 ```bash
 npm run build
 ```
 
-### Start builded project
+You will see the generated files in dist that ready to be served.
+To serve builded project run command bellow.
 
 ```bash
 npm run preview
 ```
 
-## Adding new page
+## Add new page
 
-1. Create new folder in `src/pages` and move into folder.
+1. Create new folder in `src/pages`.
 2. Create `index.html`.
 3. Create `.css` and `.ts` files if needed.
 4. Add entry point in `vite.config.ts` (see an example below).
 
-## Example
+### Example
 
-Let's say you want to add `cool` route. You create `index.html` inside  `src/page/cool/`.
-Then you add to `input` array.
+Let's say you want to add `cool` route. You create `index.html` inside `src/page/cool/`.
+Then you add line bellow to `input` array in `vite.config.ts`.
 
 ```js
-// vite.config.js
 resolve(root, 'cool', 'index.html')
 ```
 
-Now your `vite.config.js` should look like this:
+Now your `vite.config.ts` should look like this:
 
-```js
+```ts
+// vite.config.ts
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
@@ -62,7 +63,7 @@ export default defineConfig({
         resolve(root, 'index.html'),
         resolve(root, 'example', 'index.html'),
         resolve(root, 'example', 'nested', 'index.html'),
-        resolve(root, 'cool-page', 'index.html')
+        resolve(root, 'cool', 'index.html')
       ]
     }
   }
@@ -71,6 +72,18 @@ export default defineConfig({
 
 You can remove/rename example routes. `index.html` in `src` folder is root file. It means, that your `localhost:3000` will be represented by `index.html` file.
 
+## ESlint
+
+Boilerplate uses `eslint` to lint and fix your typescript. To see suggestions in your text editor, install extension.
+
+- [ESlint for VSCode](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- WebStorm has built in support by default.
+
+To manually run `eslint` over your code, you can perform command in the terminal.
+
+```bash
+npm run eslint
+```
 ## Stylelint
 
 Boilerplate uses `stylelint` to lint css. To see all errors and warnings in `css` files, install `stylelint` extension in your code editor.
@@ -78,7 +91,7 @@ Boilerplate uses `stylelint` to lint css. To see all errors and warnings in `css
 - [Stylelint for VSCode](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - WebStorm has built in support by default.
 
-Or you can run
+To manually run `stylelint` over your code, you can perform command in the terminal.
 
 ```bash
 npm run stylelint
@@ -86,4 +99,4 @@ npm run stylelint
 
 ## Editor config
 
-Consider installing `EditorConfig for VS Code` extension if you're using `VSCode`.
+Consider installing [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) extension if you're using `VSCode`.
