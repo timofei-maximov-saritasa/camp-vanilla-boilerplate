@@ -82,6 +82,7 @@ To manually run `eslint` over your code, you can perform command in the terminal
 ```bash
 npm run eslint
 ```
+
 ## Stylelint
 
 Boilerplate uses `stylelint` to lint css. To see all errors and warnings in `css` files, install `stylelint` extension in your code editor.
